@@ -3,20 +3,26 @@ import { links } from "./NavbarLinks";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoChevronUpSharp } from "react-icons/io5";
+import '../navbar/Header.jsx'
 
 
-const NavLinks = () => {
+const NavLinks = (props) => {
   const [heading, setHeading] = useState("");
   return (
     <>
       {links.map((link) => (
         <div>
-          <div className="px-3 text-left md:cursor-pointer group">
-            <h1
-              className="py-7 flex justify-between items-center md:pr-0 pr-5 group"
+          <div className="md:cursor-pointer group">
+            <p
+              className={props.color ? "hover:text-blue-500 flex justify-between items-center text-black md:pr-0 pr-5 group" : " hover:text-blue-500 flex justify-between items-center text-white md:pr-0 pr-5 group"}
               onClick={() =>
                 heading !== link.name ? setHeading(link.name) : setHeading("")
               }
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: "12px",
+                fontWeight: "600",
+              }}
             >
               {link.name}
               {link.submenu && (
@@ -29,30 +35,24 @@ const NavLinks = () => {
                     )}
                   </span>
 
-                  <span
-                    className="text-xl md:mt-1 md:ml-2 inline md:block hidden group:hover:rotate-180 group-hover:mt-2"
-                  >
+                  <span className="text-xl md:mt-1 md:ml-2 inline md:block hidden  group-hover:mt-2">
                     <IoIosArrowDown />
                   </span>
                 </>
               )}
-            </h1>
+            </p>
             {link.submenu && (
-              <div>
-                <div className="absolute top-20 hidden group-hover:md:block hover:md:block">
-                  <div className="py-3">
-                    <div className="w-4 h-4 left-3 absolute mt-1 bg-white rotate-45"></div>
-                  </div>
-                  <div className="bg-white p-3.5">
-                    {link.sublinks?.map((li) => (
-                      <div>
-                        <li className="text-sm text-gray-700 my-2.5 hover:text-blue-700">
-                          {li.name}
-                        </li>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              <div
+                className="subNavLinks bg-white absolute hidden group-hover:md:block hover:md:block "
+                style={{ border: "1px solid black", transition: "0.3s",padding:"10px 0" }}
+              >
+                  {link.sublinks?.map((li) => (
+                    <div style={{padding:"5px"}}>
+                      <li className="text-sm text-gray-700 my-2.5 hover:text-blue-700">
+                        {li.name}
+                      </li>
+                    </div>
+                  ))}
               </div>
             )}
           </div>

@@ -3,18 +3,33 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.jpg";
 import NavLinks from "./NavLinks";
 import Button from "../Buttons/Button";
-import NightModeIcon from "../../assets/NightModeIcon.webp";
+import NightModeIcon from "../../assets/NighModeIcon.jpg";
 import "../navbar/Navbar.css";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
-const Navbar = () => {
+
+const Navbar = (props) => {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="navbar bg-white">
-      <div className="flex items-center font-medium justify-around">
-        <div className=" p-5 md:w-auto w-full flex justify-between">
-          <img src={Logo} alt="Logo-Image" className="md:cursor-pointer h-9" />
+    <nav className="navbar flex justify-center w-full">
+      <div
+        id="nav"
+        className="nav flex items-center font-medium justify-between"
+      >
+        <div
+          className=" md:w-auto flex justify-center h-full"
+          style={{
+            width: "15%",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src={Logo}
+            alt="Logo-Image"
+            className="md:cursor-pointer h-9"
+            // style={{ maxHeight: "40px", marginRight: "6px", maxWidth: "172px" }}
+          />
           <div
             className="text-3xl md:hidden z-50"
             onClick={() => setOpen(!open)}
@@ -22,20 +37,37 @@ const Navbar = () => {
             {open ? <IoClose /> : <IoMenu />}
           </div>
         </div>
-        <ul className="md:flex hidden uppercase items-center gap-8 font-[Poppins]">
-          <NavLinks />
+        <ul
+          className="md:flex hidden uppercase items-center justify-around font-[Poppins]"
+          style={{ width: "60%", height: "100%" }}
+        >
+          <NavLinks color={props.color}/>
         </ul>
-        <div>
-          <div className="md:block hidden">
-            <Button />
-          </div>
-          <div>
-            <img
-              src={NightModeIcon}
-              alt="Night-Mode-Icon"
-              className="w-[45px] h-[45px]"
-            />
-          </div>
+
+        <div
+          className="md:block hidden"
+          style={{
+            width: "10% ",
+            display: "flex",
+            justifyContent: "center",
+            height: "100%",
+          }}
+        >
+          <Button />
+        </div>
+        <div
+          style={{
+            width: "5%",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <img
+            src={NightModeIcon}
+            alt="Night-Mode-Icon"
+            className="w-[45px] h-[45px]"
+            style={{ borderRadius: "50%", width: "45px", height: "45px" }}
+          />
         </div>
 
         {/* Mobile Nav */}

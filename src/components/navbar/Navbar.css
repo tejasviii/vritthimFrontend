@@ -1,3 +1,12 @@
-.navbar {
-  @apply bg-white;
+.nav {
+  height: 50px;
+  width: 60%;
+}
+@media (min-width: 1024px) {
+  .nav {
+    width: 75%;
+  }
+}
+@media (min-width: 768) {
+    
 }
