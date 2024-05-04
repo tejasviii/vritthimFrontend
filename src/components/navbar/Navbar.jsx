@@ -9,9 +9,26 @@ import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
 
-const Navbar = (props) => {
+const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY > 10) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeColor);
   return (
+    <header className={color ? "flex bg-white" : "flex"}
+    style={{
+      height: "90px",
+      width: "100%",
+      alignItems: "center",
+      position: "fixed",
+    }}>
     <nav className="navbar flex justify-center w-full">
       <div
         id="nav"
@@ -41,7 +58,7 @@ const Navbar = (props) => {
           className="md:flex hidden uppercase items-center justify-around font-[Poppins]"
           style={{ width: "60%", height: "100%" }}
         >
-          <NavLinks color={props.color}/>
+          <NavLinks color={color}/>
         </ul>
 
         <div
@@ -83,6 +100,7 @@ const Navbar = (props) => {
         </ul>
       </div>
     </nav>
+    </header>
   );
 };
 
