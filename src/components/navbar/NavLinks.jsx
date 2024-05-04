@@ -3,8 +3,6 @@ import { links } from "./NavbarLinks";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoChevronUpSharp } from "react-icons/io5";
-import '../navbar/Header.jsx'
-
 
 const NavLinks = (props) => {
   const [heading, setHeading] = useState("");
@@ -14,7 +12,11 @@ const NavLinks = (props) => {
         <div>
           <div className="md:cursor-pointer group">
             <p
-              className={props.color ? "hover:text-blue-500 flex justify-between items-center text-black md:pr-0 pr-5 group" : " hover:text-blue-500 flex justify-between items-center text-white md:pr-0 pr-5 group"}
+              className={
+                props.color
+                  ? "hover:text-blue-500 flex justify-between items-center text-black md:pr-0 pr-5 group"
+                  : " hover:text-blue-500 flex justify-between items-center text-white md:pr-0 pr-5 group"
+              }
               onClick={() =>
                 heading !== link.name ? setHeading(link.name) : setHeading("")
               }
@@ -44,15 +46,19 @@ const NavLinks = (props) => {
             {link.submenu && (
               <div
                 className="subNavLinks bg-white absolute hidden group-hover:md:block hover:md:block "
-                style={{ border: "1px solid black", transition: "0.3s",padding:"10px 0" }}
+                style={{
+                  border: "1px solid black",
+                  transition: "0.3s",
+                  padding: "10px 0",
+                }}
               >
-                  {link.sublinks?.map((li) => (
-                    <div style={{padding:"5px"}}>
-                      <li className="text-sm text-gray-700 my-2.5 hover:text-blue-700">
-                        {li.name}
-                      </li>
-                    </div>
-                  ))}
+                {link.sublinks?.map((li) => (
+                  <div style={{ padding: "5px" }}>
+                    <li className="text-sm text-gray-700 my-2.5 hover:text-blue-700">
+                      {li.name}
+                    </li>
+                  </div>
+                ))}
               </div>
             )}
           </div>

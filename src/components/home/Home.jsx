@@ -5,8 +5,17 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
 const Home = () => {
+  
   return (
-    <div className="home-main flex w-screen h-screen justify-center" style={{ backgroundImage: "url('https://static.vecteezy.com/system/resources/previews/005/843/342/non_2x/abstract-technology-ai-computing-on-circle-concept-working-data-of-artificial-intelligence-and-futuristic-digital-for-future-on-dark-blue-background-vector.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div
+      className="home-main flex w-screen h-screen justify-center"
+      style={{
+        backgroundImage:
+          "url('https://static.vecteezy.com/system/resources/previews/005/843/342/non_2x/abstract-technology-ai-computing-on-circle-concept-working-data-of-artificial-intelligence-and-futuristic-digital-for-future-on-dark-blue-background-vector.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="flex w-[75%] h-[60%] mt-[12%]">
         <div className="w-2/5 "></div>
         <div className="w-3/5 flex directon-column flex-col justify-start">
@@ -86,7 +95,11 @@ const Home = () => {
               </button>
               <button
                 className="text-[14px] font-[500] py-[14px] px-[20px] text-white bg-blue-700 hover:bg-blue-600"
-                style={{ letterSpacing: "1px", borderRadius: "50px", marginLeft:"15px"}}
+                style={{
+                  letterSpacing: "1px",
+                  borderRadius: "50px",
+                  marginLeft: "15px",
+                }}
               >
                 Get Started
               </button>
