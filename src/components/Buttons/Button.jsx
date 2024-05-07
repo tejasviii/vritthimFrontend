@@ -1,20 +1,25 @@
 import React from "react";
 
-const Button = () => {
+const Button = ({text, width, marginLeft, paddingTop, paddingBottom, paddingLeft, paddingRight}) => {
   return (
     <button
       class="bg-blue-700 text-white  hover:bg-blue-600"
       style={{
         fontFamily: "'Poppins', sans-serif",
-        fontWeight: "400",
-        fontSize:"14px",
+        fontWeight: "500",
+        fontSize: "14px",
         letterSpacing: "1px",
         display: "inline-block",
         borderRadius: "50px",
-        width: "100%",
+        width: width,
+        marginLeft : marginLeft,
+        paddingTop: paddingTop,
+        paddingBottom: paddingBottom,
+        paddingLeft: paddingLeft,
+        paddingRight: paddingRight
       }}
     >
-      Get Quotes
+      {text}
     </button>
   );
 };

@@ -3,9 +3,10 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import content from "../content/content.json";
+import Button from "../Buttons/Button";
 
 const Home = () => {
-  
   return (
     <div
       className="home-main flex w-screen h-screen justify-center"
@@ -31,10 +32,7 @@ const Home = () => {
               </h2>
             </div>
             <div className="width=[100%]">
-              <p className="font-[400] mb-[30px] text-white">
-                You can easily change any design to your own. It is also highly
-                customizable SEO friendly template.
-              </p>
+              <p className="font-[400] mb-[30px] text-white">{content.title}</p>
             </div>
             <div
               className="flex justify-start mt-4 mb-4"
@@ -87,22 +85,21 @@ const Home = () => {
               </a>
             </div>
             <div className="flex justify-start">
-              <button
-                className="text-[14px] font-[500] py-[14px] px-[20px] text-white bg-blue-700 hover:bg-blue-600"
-                style={{ letterSpacing: "1px", borderRadius: "50px" }}
-              >
-                Get Quotes
-              </button>
-              <button
-                className="text-[14px] font-[500] py-[14px] px-[20px] text-white bg-blue-700 hover:bg-blue-600"
-                style={{
-                  letterSpacing: "1px",
-                  borderRadius: "50px",
-                  marginLeft: "15px",
-                }}
-              >
-                Get Started
-              </button>
+              <Button
+                text="Get Quotes"
+                paddingTop="14px"
+                paddingBottom="14px"
+                paddingLeft="20px"
+                paddingRight="20px"
+              ></Button>
+              <Button
+                text="Get Started"
+                marginLeft="15px"
+                paddingTop="14px"
+                paddingBottom="14px"
+                paddingLeft="20px"
+                paddingRight="20px"
+              ></Button>
             </div>
           </div>
         </div>

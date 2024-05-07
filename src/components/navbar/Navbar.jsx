@@ -45,7 +45,6 @@ const Navbar = () => {
             src={Logo}
             alt="Logo-Image"
             className="md:cursor-pointer h-9"
-            // style={{ maxHeight: "40px", marginRight: "6px", maxWidth: "172px" }}
           />
           <div
             className="text-3xl md:hidden z-50"
@@ -70,7 +69,7 @@ const Navbar = () => {
             height: "100%",
           }}
         >
-          <Button />
+          <Button text="Get Quotes" width="100%"></Button>
         </div>
         <div
           style={{
