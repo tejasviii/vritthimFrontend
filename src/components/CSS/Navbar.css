@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.logo-container {
+  display: flex;
+  gap: 1.5vw;
+}
+
+.logo-text {
+  font-family: Raleway;
+  color: beige;
+  font-size: 1.8rem;
+  font-weight: 900;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+
+.nav {
+  height: 10vh;
+  position: fixed;
+  width: 100%;
+  background: rgba(13, 26, 43, 0.973);
+  top: 0%;
+  z-index: 99;
+}
+
+
+.nav-div {
+  display: flex;
+  z-index: 4;
+  height: 10vh;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  color: antiquewhite;
+  font-family: "urbanist", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  transition: 400ms;
+}
+
+
+.links {
+  display: flex;
+  align-items: center;
+  height: 2vw;
+  gap: 0.5vw;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  background-color: transparent;
+  border-right: 1px solid white;
+  transition: 400ms;
+  font-size: 1rem;
+}
+
+.links:hover {
+  height: 10vh;
+  padding-right: 4rem;
+  background-color: rgba(0, 0, 0, 0.575);
+
+}
+
+.nav-icons{
+  width: 1rem;
+}
+
+
+
+#page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#h3 {
+  color: white;
+}
+
+#ring {
+  width: 190px;
+  height: 190px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#ring:nth-child(1) {
+  border-bottom: 8px solid rgb(255, 141, 249);
+  animation: rotate1 2s linear infinite;
+}
+
+@keyframes rotate1 {
+  from {
+    transform: rotateX(50deg) rotateZ(110deg);
+  }
+
+  to {
+    transform: rotateX(50deg) rotateZ(470deg);
+  }
+}
+
+#ring:nth-child(2) {
+  border-bottom: 8px solid rgb(255, 65, 106);
+  animation: rotate2 2s linear infinite;
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+  }
+
+  to {
+    transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+  }
+}
+
+#ring:nth-child(3) {
+  border-bottom: 8px solid rgb(0, 255, 255);
+  animation: rotate3 2s linear infinite;
+}
+
+@keyframes rotate3 {
+  from {
+    transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+  }
+
+  to {
+    transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+  }
+}
+
+#ring:nth-child(4) {
+  border-bottom: 8px solid rgb(252, 183, 55);
+  animation: rotate4 2s linear infinite;
+}
+
+@keyframes rotate4 {
+  from {
+    transform: rotateX(70deg) rotateZ(270deg);
+  }
+
+  to {
+    transform: rotateX(70deg) rotateZ(630deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* The switch - the box around the slider */
+#theme-toggle-button {
+  font-size: 0.8vw;
+  position: relative;
+  display: flex;
+  width: 6rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* Hide default HTML checkbox */
+#toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.25s;
+}
+
+/* night sky background */
+#toggle:checked + svg #container {
+  fill: #2b4360;
+}
+
+/* move button to right when checked */
+#toggle:checked + svg #button {
+  transform: translate(28px, 2.333px);
+}
+
+/* show/hide sun and moon based on checkbox state */
+#sun {
+  opacity: 1;
+}
+
+#toggle:checked + svg #sun {
+  opacity: 0;
+}
+
+#moon {
+  opacity: 0;
+}
+
+#toggle:checked + svg #moon {
+  opacity: 1;
+}
+
+/* show or hide background items on checkbox state */
+#cloud {
+  opacity: 1;
+}
+
+#toggle:checked + svg #cloud {
+  opacity: 0;
+}
+
+#stars {
+  opacity: 0;
+}
+
+#toggle:checked + svg #stars {
+  opacity: 1;
+}
+
+
+.hamburger{
+  display: none;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-div{
+    justify-content: space-between;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+  .logo-text{
+    font-size: 1.6rem;
+  }
+  .hamburger{
+    display: block;
+  }
+  .toggle-btn{
+    display: none;
+  }
+  #theme-toggle-button {
+    font-size: 0.8vw;
+    position: relative;
+    display: flex;
+    width: 4rem;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+}
