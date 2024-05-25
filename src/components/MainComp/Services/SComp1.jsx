@@ -7,7 +7,7 @@ export default function SComp1() {
 
 
             <div
-                class="relative mt-30 overflow-hidden bg-cover bg-no-repeat bg-[50%] h-[500px] bg-[url('https://tecdn.b-cdn.net/img/new/standard/city/078.jpg')] hero-services">
+                class="relative mt-30 overflow-hidden bg-cover bg-no-repeat bg-[50%] h-[500px]  hero-services">
                 <div
                     class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed bg-[hsla(0,0%,0%,0.75)]">
                     <div class="flex h-full items-center justify-center">

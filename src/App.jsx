@@ -6,6 +6,7 @@ import Nav from "./components/MainComp/Nav";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './Layout';
 import Services from "./components/MainComp/Services/Services";
+import Contact from "./components/MainComp/Contact/Contact";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/services" element={<Services />} />
+            <Route exact path="/contact" element={<Contact />} />
           </Routes>
         </Layout>
       </BrowserRouter>

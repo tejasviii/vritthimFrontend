@@ -50,4 +50,5 @@ html{
 
 .hero-services{
     border-radius: 25% 27% 29% 32% / 0% 0% 21% 23%;
+    background-image: url('/Images/bg2.jpg');
 }
