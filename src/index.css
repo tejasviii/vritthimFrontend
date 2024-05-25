@@ -65,7 +65,124 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+.raleway {
+  font-family: raleway;
+}
+
+.raleway-bold {
+  font-family: raleway;
+  font-weight: 900;
+}
+
+
+.urbanist {
+  font-family: urbanist;
+}
+
+.urbanist-bold {
+  font-family: urbanist;
+  font-weight: 900;
+}
+
+
+
+.righteous {
+  font-family: Righteous;
+}
+
+.righteous-bold {
+  font-family: Righteous;
+  font-weight: 900;
+}
+
+
+
+.comfortaa {
+  font-family: Comfortaa;
+}
+
+.comfortaa-bold {
+  font-family: Comfortaa;
+  font-weight: 900;
+}
+
 
 body {
   scroll-behavior: smooth;
 }
+
+
+:root {
+  --background-color: white;
+  --text-color: black;
+  --element-background-color: #ffffff;
+  --element-text-color: rgb(0, 0, 0);
+}
+
+/* [data-theme='dark'] {
+  --background-color: #1b1515;
+  --text-color: white;
+  --element-background-color: #1d1a1a;
+  --element-text-color: rgb(255, 255, 255);
+  --element-light-text-color: rgb(199, 176, 176);
+} much darker */
+[data-theme='dark'] {
+  --background-color: #1a1625;
+  --text-color: white;
+  --element-background-color: #2f2b3a;
+  --element-text-color: rgb(255, 255, 255);
+  --element-light-text-color: rgb(199, 176, 176);
+
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Apply theme variables to all elements */
+
+.hero-section{
+  background-color: var(--background-color);
+  color: var(--element-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+.contact-section{
+  background-color: var(--background-color);
+  color: var(--element-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+.section2{
+  background-color: var(--background-color);
+  color: var(--element-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+.card-s3{
+  background-color: var(--element-background-color);
+  color: var(--element-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+.testii{
+  background-color: var(--element-background-color);
+  color: var(--element-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+.contact-form{
+  background-color: var(--element-background-color);
+  color: var(--element-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+.dark-mode-fonts{
+  color: var(--element-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+.dark-mode-fonts-light{
+  color: var(--element-light-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+
+
